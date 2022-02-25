@@ -18,12 +18,11 @@ const app = new Vue ({
             if( this.newTodo === '' ){
                 return;
             }
-            this.text.push( this.newTodo );
-            this.done.push( false );
+            this.todoList.push( {text:this.newTodo, done: false} );
             this.newTodo = '';
         },
         deleteTodo: function( i ) {
             this.todoList.splice(i,1)
-        }
+        },
     },
 })

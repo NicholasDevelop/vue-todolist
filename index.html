@@ -21,7 +21,7 @@
 
         <div class="list.wrapper">
             <ul class="todo-list">
-                <li v-for="(el, i) in todoList" class="todo"><span>{{el.text}}</span><i @click="deleteTodo(i)" class="fa-solid fa-xmark"></i></li>
+                <li v-for="(el, i) in todoList" class="todo"><span :class="el.done === false ? '' : 'done'" @click="el.done = !el.done">{{el.text}}</span><i @click="deleteTodo(i)" class="fa-solid fa-xmark"></i></li>
             </ul>
         </div>
 
